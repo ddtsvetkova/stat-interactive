@@ -13189,7 +13189,6 @@ div#notebook {
     <span class="c1"># Коэффициенты: Автоматический расчет</span>
     
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">---- Коэффициенты: Автоматический расчет ---------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-    <span class="o">!</span>pip install sklearn
     <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">LinearRegression</span>
     <span class="n">xa</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
     <span class="n">ya</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
@@ -13210,7 +13209,6 @@ div#notebook {
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">---- Доверительный интервал для b_0 --------------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
     
     <span class="c1">### Про распределение Стьюдента</span>
-    <span class="o">!</span>pip install scipy
     <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="k">import</span> <span class="n">t</span>
     <span class="n">deg_freedom</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">2</span>
     <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.05</span>
