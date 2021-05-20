@@ -13146,15 +13146,98 @@ div#notebook {
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nd">@interact</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;19.2 15.8 12.5 10.3 5.7 -5.8 -3.5 5.2 7.3 6.7&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;20.1 18 10.3 12.5 6 -6.8 -2.8 3 8.5 8&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="s1">&#39;0.05&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">stats</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">alpha</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="nx">javascript</span>
+<span class="nx">IPython</span><span class="p">.</span><span class="nx">OutputArea</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">_should_scroll</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">lines</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+
+
+
+<div id="33a4ddf2-61be-48f5-813b-9e8255e8dafb"></div>
+<div class="output_subarea output_javascript ">
+<script type="text/javascript">
+var element = $('#33a4ddf2-61be-48f5-813b-9e8255e8dafb');
+IPython.OutputArea.prototype._should_scroll = function(lines) {
+    return false;
+}
+
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nd">@interact</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;12.5 17.5 17.5 17.5 22.5 22.5 22.5 22.5 22.5 27.5 27.5 27.5 27.5 27.5 27.5 27.5 27.5 27.5 27.5 27.5&#39;</span><span class="p">,</span>\
+          <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;20.5 21.5 21.5 22.5 22.5 22.5 23.5 23.5 23.5 23.5 23.5 23.5 24.5 24.5 24.5 24.5 24.5 24.5 24.5 24.5&#39;</span><span class="p">,</span>\
+          <span class="n">alpha</span> <span class="o">=</span> <span class="s1">&#39;0.05&#39;</span><span class="p">,</span> <span class="n">x_0</span> <span class="o">=</span> <span class="s1">&#39;25&#39;</span><span class="p">,</span> <span class="n">alpha_f</span> <span class="o">=</span> <span class="s1">&#39;0.05&#39;</span><span class="p">)</span>
+<span class="c1">#@interact(x = &#39;19.2 15.8 12.5 10.3 5.7 -5.8 -3.5 5.2 7.3 6.7&#39;, y = &#39;20.1 18 10.3 12.5 6 -6.8 -2.8 3 8.5 8&#39;,\</span>
+          <span class="c1">#alpha = &#39;0.05&#39;, x_0 = &#39;7&#39;, alpha_f = &#39;0.05&#39;)</span>
+
+<span class="k">def</span> <span class="nf">stats</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">x_0</span><span class="p">,</span> <span class="n">alpha_f</span><span class="p">):</span>
     
     <span class="c1"># Данные</span>
     
     <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)]</span>
     <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">y</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)]</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ooops! Разное количество наблюдений х и у!</span><span class="se">\n\n</span><span class="s2">(ノಠ益ಠ)ノ&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;x = </span><span class="si">{x}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;y = </span><span class="si">{y}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Число наблюдений = </span><span class="si">{n}</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="n">alpha</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span>
+    <span class="n">x_0</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">x_0</span><span class="p">)</span>
+    <span class="n">alpha_f</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">alpha_f</span><span class="p">)</span>
+    
+    
+    
+    <span class="c1"># Диаграмма рассеивания</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="o">!</span>pip install numpy
+        <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="o">!</span>pip install matplotlib
+        <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Диаграмма рассеивания:&quot;</span><span class="p">)</span>
+    <span class="n">img_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">img_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn-whitegrid&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    
     
     <span class="c1"># Промежуточные вычисления (выборочные статистики)</span>
     
@@ -13175,9 +13258,11 @@ div#notebook {
     <span class="n">d_y</span> <span class="o">=</span> <span class="n">mean</span><span class="p">([(</span><span class="n">i</span> <span class="o">-</span> <span class="n">e_y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">y</span><span class="p">])</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;d_y = </span><span class="si">{d_y}</span><span class="s1">&#39;</span><span class="p">)</span>
     
+    
+    
     <span class="c1"># Коэффициенты: Вручную</span>
     
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">---- Коэффициенты: Вручную ----------------------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n\n</span><span class="s1">---- Коэффициенты: Вручную ----------------------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">b_1</span> <span class="o">=</span> <span class="p">(</span><span class="n">e_xy</span> <span class="o">-</span> <span class="n">e_x</span><span class="o">*</span><span class="n">e_y</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">e_x2</span> <span class="o">-</span> <span class="n">e_x_2</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;b_1 = </span><span class="si">{b_1}</span><span class="s1"> </span><span class="se">\n</span><span class="s1"> rounded: {round(b_1, 2)}&#39;</span><span class="p">)</span>
     <span class="n">b_0</span> <span class="o">=</span> <span class="n">e_y</span> <span class="o">-</span> <span class="n">b_1</span><span class="o">*</span><span class="n">e_x</span>
@@ -13185,9 +13270,11 @@ div#notebook {
     <span class="n">y_pred</span> <span class="o">=</span> <span class="p">[</span><span class="n">b_0</span> <span class="o">+</span> <span class="n">b_1</span><span class="o">*</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;predicted values of y: </span><span class="se">\n</span><span class="s1"> </span><span class="si">{y_pred}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
     
+    
+    
     <span class="c1"># Коэффициенты: Автоматический расчет</span>
     
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">---- Коэффициенты: Автоматический расчет ---------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">---- Коэффициенты: Автоматический расчет ---------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">LinearRegression</span>
     <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
@@ -13207,9 +13294,11 @@ div#notebook {
     <span class="n">sum_sqres</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([(</span><span class="n">j</span> <span class="o">-</span> <span class="n">b_0</span> <span class="o">-</span> <span class="n">b_1</span><span class="o">*</span><span class="n">i</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)])</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">RSS = </span><span class="si">{sum_sqres}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
     
+    
+    
     <span class="c1"># Доверительный интервал для b_0</span>
     
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">---- Доверительный интервал для b_0 --------------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">---- Доверительный интервал для b_0 --------------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
     
     <span class="c1">### Про распределение Стьюдента</span>
     <span class="k">try</span><span class="p">:</span>
@@ -13234,23 +13323,31 @@ div#notebook {
     <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;root = </span><span class="si">{root}</span><span class="s1">&#39;</span><span class="p">)</span>
     
     <span class="c1">### Нижняя граница</span>
-    
     <span class="n">lower</span> <span class="o">=</span> <span class="o">-</span><span class="n">root</span><span class="o">*</span><span class="n">t_val</span> <span class="o">+</span> <span class="n">b_0</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;lower = </span><span class="si">{lower}</span><span class="s1">&#39;</span><span class="p">)</span>
     
     <span class="c1">### Верхняя граница</span>
-    
     <span class="n">upper</span> <span class="o">=</span> <span class="n">root</span><span class="o">*</span><span class="n">t_val</span> <span class="o">+</span> <span class="n">b_0</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;upper = </span><span class="si">{upper}</span><span class="s1">&#39;</span><span class="p">)</span>
     
-    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Доверительный интервал = (</span><span class="si">{lower}</span><span class="s1">, </span><span class="si">{upper}</span><span class="s1">)&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Доверительный интервал = (</span><span class="si">{lower}</span><span class="s1">, </span><span class="si">{upper}</span><span class="s1">)</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    <span class="c1">### Значимость (H0: beta_0 = 0; H1: beta_0 != 0)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Проверка значимости на основе t-статистики (H0: beta_0 = 0; H1: beta_0 != 0)&#39;</span><span class="p">)</span>
+    <span class="n">t_b_0</span> <span class="o">=</span> <span class="n">b_0</span> <span class="o">/</span> <span class="n">root</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;t-статистика t_b_0 = </span><span class="si">{t_b_0}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">t_b_0</span> <span class="o">&gt;</span> <span class="n">t_val</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;=&gt; b_0 статистически значим на уровне значимости </span><span class="si">{alpha}</span><span class="s1">!</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;=&gt; b_0 статистически не значим на уровне значимости </span><span class="si">{alpha}</span><span class="s1">!</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    
     
     <span class="c1"># Доверительный интервал для b_1</span>
     
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">---- Доверительный интервал для b_1 --------------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">---- Доверительный интервал для b_1 --------------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
     
     <span class="c1">### Про распределение Стьюдента</span>
-    
     <span class="n">deg_freedom</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">2</span>
     <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.05</span>
     <span class="c1"># t.interval(1 - alpha, deg_freedom, loc=0, scale=1) --------&gt;  (-t_val, t_val)</span>
@@ -13259,7 +13356,6 @@ div#notebook {
          <span class="n">f</span><span class="s1">&#39;t_val = </span><span class="si">{t_val}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
     
     <span class="c1">### Расчеты корня</span>
-    
     <span class="n">_sigma</span> <span class="o">=</span> <span class="n">sum_sqres</span> <span class="o">/</span> <span class="n">deg_freedom</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;_sigma = </span><span class="si">{_sigma}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">_in_brackets</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">d_x</span><span class="p">)</span>
@@ -13268,16 +13364,146 @@ div#notebook {
     <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;_root = </span><span class="si">{_root}</span><span class="s1">&#39;</span><span class="p">)</span>
     
     <span class="c1">### Нижняя граница</span>
-    
     <span class="n">_lower</span> <span class="o">=</span> <span class="o">-</span><span class="n">_root</span><span class="o">*</span><span class="n">t_val</span> <span class="o">+</span> <span class="n">b_1</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;_lower = </span><span class="si">{_lower}</span><span class="s1">&#39;</span><span class="p">)</span>
     
     <span class="c1">### Верхняя граница</span>
-    
     <span class="n">_upper</span> <span class="o">=</span> <span class="n">_root</span><span class="o">*</span><span class="n">t_val</span> <span class="o">+</span> <span class="n">b_1</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;_upper = </span><span class="si">{_upper}</span><span class="s1">&#39;</span><span class="p">)</span>
     
-    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Доверительный интервал = (</span><span class="si">{_lower}</span><span class="s1">, </span><span class="si">{_upper}</span><span class="s1">)&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Доверительный интервал = (</span><span class="si">{_lower}</span><span class="s1">, </span><span class="si">{_upper}</span><span class="s1">)</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    <span class="c1">### Значимость (H0: beta_0 = 0; H1: beta_0 != 0)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Проверка значимости на основе t-статистики (H0: beta_1 = 0; H1: beta_1 != 0)&#39;</span><span class="p">)</span>
+    <span class="n">t_b_1</span> <span class="o">=</span> <span class="n">b_1</span> <span class="o">/</span> <span class="n">_root</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;t-статистика t_b_1 = </span><span class="si">{t_b_1}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">t_b_1</span> <span class="o">&gt;</span> <span class="n">t_val</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;=&gt; b_1 статистически значим на уровне значимости </span><span class="si">{alpha}</span><span class="s1">!</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;=&gt; b_1 статистически не значим на уровне значимости </span><span class="si">{alpha}</span><span class="s1">!</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    
+    
+    <span class="c1"># Доверительный интервал для E(Y|X = x_0)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">---- Доверительный интервал для E(Y|X = x_0) ------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    <span class="c1">### Про распределение Стьюдента</span>
+    <span class="n">deg_freedom</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">2</span>
+    <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.05</span>
+    <span class="c1"># t.interval(1 - alpha, deg_freedom, loc=0, scale=1) --------&gt;  (-t_val, t_val)</span>
+    <span class="n">t_val</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">deg_freedom</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Критическая точка распределения Стьюдента c </span><span class="si">{deg_freedom}</span><span class="s1"> степенями свободы при уровне значимости </span><span class="si">{alpha}</span><span class="s1">:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">+</span>
+         <span class="n">f</span><span class="s1">&#39;t_val = </span><span class="si">{t_val}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    <span class="c1">### Расчеты корня</span>
+    <span class="n">y_0</span> <span class="o">=</span> <span class="n">b_0</span> <span class="o">+</span> <span class="n">b_1</span> <span class="o">*</span> <span class="n">x_0</span>
+    <span class="n">sig</span> <span class="o">=</span> <span class="n">sum_sqres</span> <span class="o">/</span> <span class="n">deg_freedom</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;sig = </span><span class="si">{sig}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">in_br</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">n</span> <span class="o">+</span> <span class="p">(</span><span class="n">x_0</span> <span class="o">-</span> <span class="n">e_x</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">d_x</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;in_br = </span><span class="si">{in_br}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">rt</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">sig</span> <span class="o">*</span> <span class="n">in_br</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;rt = </span><span class="si">{rt}</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    <span class="c1">### Нижняя граница</span>
+    <span class="n">low</span> <span class="o">=</span> <span class="o">-</span><span class="n">rt</span><span class="o">*</span><span class="n">t_val</span> <span class="o">+</span> <span class="n">y_0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;low = </span><span class="si">{low}</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    <span class="c1">### Верхняя граница</span>
+    <span class="n">up</span> <span class="o">=</span> <span class="n">rt</span><span class="o">*</span><span class="n">t_val</span> <span class="o">+</span> <span class="n">y_0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;up = </span><span class="si">{up}</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Доверительный интервал = (</span><span class="si">{low}</span><span class="s1">, </span><span class="si">{up}</span><span class="s1">)</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    
+    
+    <span class="c1"># Доверительный интервал для y_0</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">---- Доверительный интервал для y_0 --------------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    <span class="c1">### Про распределение Стьюдента</span>
+    <span class="n">deg_freedom</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">2</span>
+    <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.05</span>
+    <span class="c1"># t.interval(1 - alpha, deg_freedom, loc=0, scale=1) --------&gt;  (-t_val, t_val)</span>
+    <span class="n">t_val</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">deg_freedom</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Критическая точка распределения Стьюдента c </span><span class="si">{deg_freedom}</span><span class="s1"> степенями свободы при уровне значимости </span><span class="si">{alpha}</span><span class="s1">:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">+</span>
+         <span class="n">f</span><span class="s1">&#39;t_val = </span><span class="si">{t_val}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    <span class="c1">### Расчеты корня</span>
+    <span class="n">y_0</span> <span class="o">=</span> <span class="n">b_0</span> <span class="o">+</span> <span class="n">b_1</span> <span class="o">*</span> <span class="n">x_0</span>
+    <span class="n">_sig</span> <span class="o">=</span> <span class="n">sum_sqres</span> <span class="o">/</span> <span class="n">deg_freedom</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;_sig = </span><span class="si">{_sig}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">_in_br</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="o">/</span><span class="n">n</span> <span class="o">+</span> <span class="p">(</span><span class="n">x_0</span> <span class="o">-</span> <span class="n">e_x</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">d_x</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;_in_br = </span><span class="si">{_in_br}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">_rt</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">_sig</span> <span class="o">*</span> <span class="n">_in_br</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;_rt = </span><span class="si">{_rt}</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    <span class="c1">### Нижняя граница</span>
+    <span class="n">_low</span> <span class="o">=</span> <span class="o">-</span><span class="n">_rt</span><span class="o">*</span><span class="n">t_val</span> <span class="o">+</span> <span class="n">y_0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;_low = </span><span class="si">{_low}</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    <span class="c1">### Верхняя граница</span>
+    <span class="n">_up</span> <span class="o">=</span> <span class="n">_rt</span><span class="o">*</span><span class="n">t_val</span> <span class="o">+</span> <span class="n">y_0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;_up = </span><span class="si">{_up}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Доверительный интервал = (</span><span class="si">{_low}</span><span class="s1">, </span><span class="si">{_up}</span><span class="s1">)</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    
+    
+    <span class="c1"># Показатели качества уравнения регрессии в целом</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">---- Показатели качества уравнения регрессии в целом ---------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    <span class="c1">### R^2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;#### R^2 ####&#39;</span><span class="p">)</span>
+    <span class="n">R_2</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">sum_sqres</span> <span class="o">/</span> <span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">d_y</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;R^2 (Вручную) = </span><span class="si">{R_2}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;coefficient of determination (R^2) =&#39;</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">xa</span><span class="p">,</span> <span class="n">ya</span><span class="p">))</span> 
+    
+    <span class="c1">### F</span>
+    <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="k">import</span> <span class="n">f</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">#### F ####&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;RSS = </span><span class="si">{sum_sqres}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="c1"># in y_pred are the predicted values of y</span>
+    <span class="n">ess</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([(</span><span class="n">b_0</span> <span class="o">+</span> <span class="n">b_1</span><span class="o">*</span><span class="n">i</span> <span class="o">-</span> <span class="n">e_y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;ESS = </span><span class="si">{ess}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="c1"># print(sum([(k - e_y) ** 2 for k in y_pred])) - то же самое</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;m = </span><span class="si">{m}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">n_m_1</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;n-m-1 = </span><span class="si">{n_m_1}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">f_val</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="n">q</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">dfn</span> <span class="o">=</span> <span class="n">m</span><span class="p">,</span> <span class="n">dfd</span> <span class="o">=</span> <span class="n">n_m_1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Критическая точка распределения Фишера c m = </span><span class="si">{m}</span><span class="s1"> и n-m-1 = </span><span class="si">{n_m_1}</span><span class="s1"> степенями свободы при уровне значимости </span><span class="si">{alpha_f}</span><span class="s1">:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">+</span>
+         <span class="n">f</span><span class="s1">&#39;f_val = </span><span class="si">{f_val}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    <span class="n">F</span> <span class="o">=</span> <span class="p">(</span><span class="n">ess</span> <span class="o">/</span> <span class="n">m</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">sum_sqres</span> <span class="o">/</span> <span class="n">n_m_1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;F = </span><span class="si">{F}</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    <span class="c1">##### Значимость </span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Проверка значимости уравнения в целом на основе F-статистики&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">F</span> <span class="o">&gt;</span> <span class="n">f_val</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;=&gt; уравнение в целом статистически значимо на уровне значимости </span><span class="si">{alpha_f}</span><span class="s1">!</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;=&gt; уравнение в целом статистически не значимо на уровне значимости </span><span class="si">{alpha_f}</span><span class="s1">!</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    
+    
+    <span class="c1">### Коэффициент корреляции r_xy</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">#### r_xy ####&#39;</span><span class="p">)</span>
+    <span class="n">cov_xy</span> <span class="o">=</span> <span class="n">mean</span><span class="p">([(</span><span class="n">i</span> <span class="o">-</span> <span class="n">e_x</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">j</span> <span class="o">-</span> <span class="n">e_y</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;cov_xy = </span><span class="si">{cov_xy}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">r_xy</span> <span class="o">=</span> <span class="n">cov_xy</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">d_x</span> <span class="o">*</span> <span class="n">d_y</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;r_xy (Вручную) = </span><span class="si">{r_xy}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;correlation matrix </span><span class="se">\n</span><span class="s1">{np.corrcoef(x, y)}&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;coefficient of correlation (r_xy) =&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+    
+    <span class="c1">### RSS</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">#### RSS ####&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;RSS = </span><span class="si">{sum_sqres}</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    <span class="c1">### Стандартная ошибка регрессии</span>
+    <span class="c1"># print(&#39;\n#### Стандартная ошибка регрессии ####&#39;)</span>
+    
+    
     
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">(ﾉ◕ヮ◕)⊃━☆ﾟ*:･ﾟ✧&#39;</span><span class="p">)</span>
     
